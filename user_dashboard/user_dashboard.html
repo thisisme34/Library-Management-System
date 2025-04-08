@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="user_dashboard.css">
+</head>
+<body>
+
+    <header>
+        <h1>Library Management System</h1>
+    </header>
+
+    <nav>
+        <a href="#home-page">Home Page</a>
+        <a href="#issue-book">Issue Book</a>
+        <a href="#add-book">Add Book</a>
+        <a href="../new_user/new_user.php">New User</a>
+        <a href="#return-book">Return Book</a>
+        <a href="#statistics">Statistics</a>
+        <button onclick="logout()">Log out</button>
+
+    </nav>
+
+    <section>
+        <div id="scrolling-message">Welcome to the Library Management System!</div>
+
+        <h2>Library Information</h2>
+        <p>Total number of books available in the library: <?php echo $totalBooks; ?></p>
+        <p>Total number of registered members: <?php echo $totalMembers; ?></p>
+    </section>
+
+</body>
+</html>

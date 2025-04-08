@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+nav {
+    background-color: #eee;
+    padding: 10px;
+}
+
+nav a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s; /* Add transition for smooth color change */
+}
+
+nav a:hover {
+    color: #ffc107; /* Change the color on hover */
+}
+
+section {
+    padding: 20px;
+}
+
+#scrolling-message {
+    background-color: #ffc107;
+    color: #333;
+    text-align: center;
+    padding: 10px;
+   /* position: fixed;*/
+    top: 0;
+    width: 100%;
+    animation: scroll 15s linear infinite;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+nav button {
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System - Return Books</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+        .error_msg
+        {
+            text-align:center;
+            color:red;
+            font-size:20px;
+        }
+        .success_msg
+        {
+            text-align:center;
+            color:green;
+            font-size:20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Return Book</h2>
+        <form id="returnForm" action="return_books.php" method="post">
+            <label for="memberID">Member ID:</label>
+            <input type="text" id="memberID" name="memberID" required>
+
+            <label for="bookID">Book ID:</label>
+            <input type="text" id="bookID" name="bookID" required>
+
+            <button type="submit">Return Book</button>
+        </form>
+    </div>
+</body>
+</html>

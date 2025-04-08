@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+          
+        }
+        .form_body {
+            margin: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        form {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        label {
+            display: block;
+            margin: 10px;
+            font-size: 20px;
+        }
+        input[type=text] {
+            box-shadow: 0 0 2px black;
+            padding: 5px;
+            font-size: 1em;
+            height:100%;
+        }
+        #search_btn {
+            font-size:20px;
+            color:rgb(32, 32, 35);
+            background: rgb(149, 198, 205);
+            width: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            border:none;
+            padding: 4px;
+            margin: 0px 5px;
+            height:100%;
+        }
+        #search_btn input[type="submit"] {
+            font-size:18px;
+            color:rgb(32, 32, 35);
+            background: transparent;
+            border: none;
+            outline: none;
+            margin-left: 5px;
+        }
+        #search_btn:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="form_body">
+        <form id="search" action="dummy.php" method="post">
+            <label for="member_search">Member ID</label>
+            <input type="text" name="member_search" id="member_search">
+            <div id="search_btn">
+                <input type="submit" value="Search"><i class='bx bx-search'></i>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

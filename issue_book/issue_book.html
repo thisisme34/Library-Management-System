@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System - Issue Books</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display:flex;
+            flex-direction: column;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+        .error_msg
+        {
+            text-align:center;
+            color:red;
+            font-size:20px;
+        }
+        .success_msg
+        {
+            text-align:center;
+            color:green;
+            font-size:20px;
+        }
+        .bottom_img {
+            position: relative;
+            bottom:0;
+            left:0;
+        }
+        .bottom_img img{
+            float:left;
+            height:200px;
+            width:200px;
+        }
+        
+       
+    </style>
+</head>
+<body>
+        <div class="container">
+            <h2>Issue Book <i class='bx bxs-book'></i></h2>
+            <form id="issueForm" action="issue_book.php" method="post">
+                <label for="memberID">Member ID:</label>
+                <input type="text" id="memberID" name="memberID" required>
+    
+                <label for="bookID">Book ID:</label>
+                <input type="text" id="bookID" name="bookID" required>
+    
+                <label for="issueDate">Issue Date:</label>
+                <input type="date" id="issueDate" name="issueDate" required placeholder="Select date" value="" />
+    
+                <label for="returnDate">Due Date:</label>
+                <input type="date" id="returnDate" name="returnDate" required placeholder="Select date" value="" />
+    
+                <button type="submit">Issue Book</button>
+            </form>
+        </div>
+        <div class="bottom_img">
+            <img src="../images/book_open.png">
+        </div>
+   
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get current date
+            var currentDate = new Date().toISOString().split('T')[0];
+            // Set issueDate value to current date
+            document.getElementById("issueDate").value = currentDate;
+    
+            // Get return date (30 days from current date)
+            var returnDate = new Date();
+            returnDate.setDate(returnDate.getDate() + 30);
+            var returnDateFormatted = returnDate.toISOString().split('T')[0];
+            
+            // Set returnDate value to 30 days from current date
+            document.getElementById("returnDate").value = returnDateFormatted;
+        });
+    </script>
+    
+
+    
+
+</body>
+</html>
